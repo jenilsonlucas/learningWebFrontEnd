@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+main{
+    height: 100vh;
+    background: url("/moonligth/assets/images/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    padding: 25px 100px;
+}
+
+.navbar .logo{
+   font-size: 30px;
+   font-weight: 700;   
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    margin-right: 35px;
+    list-style: none;
+    position: relative;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar ul li::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    background: #fff;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s ease;
+}
+
+.navbar ul li:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    height: 100vh;
+    padding: 50px 100px 0;
+    color: #fff;
+}
+
+.info h1{
+    font-size: 50px;
+}
+
+.info p{
+    margin: 10px 0 25px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 50px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.login-box{
+    width: 450px;
+    border-radius: 10px;
+    padding: 50px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.login-box h1{
+    text-align: center;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.login-box .input-box{
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    outline: none;
+    padding: 13px 50px 13px 20px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.login-box .remember-forgot{
+    margin: -20px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14.5px;
+}
+
+.remember-forgot input{
+    accent-color: #fff;
+    margin-right: 6px;
+}
+
+.remember-forgot a:hover,
+.register-link a:hover{
+    text-decoration: underline;
+}
+
+.login-box .btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-box .register-link{
+    display: flex;
+    justify-content: center;
+    font-size: 14.5px;
+    margin-top: 15px;
+}
+
+.register-link a{
+    font-weight: 600;
+    margin-left: 4px;
+}
