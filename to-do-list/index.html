@@ -54,7 +54,7 @@
             <a href="#" class="thing-all"><i class='bx bx-chevron-down-circle'></i>Todas as tarefas</a>
             <div class="dropdown">
                 <div class="select">
-                    <span class="selected">Categorias</span>
+                    <span class="selected">Listas</span>
                     <div class="caret"></div>
                 </div>
                 <ul class="menu">
@@ -68,7 +68,7 @@
                     </li>
                 </ul>
             </div>
-            <span class="thing-all"><i class='bx bx-plus'></i>Criar nova categoria</span>
+            <span class="thing-all"><i class='bx bx-plus'></i>Criar nova lista</span>
             <a href="#" class="loggout"><i class='bx bxs-door-open'></i>Sair</a>
 
         </nav>
@@ -77,85 +77,63 @@
     <div class="content">
         <div class="tasks-list">
             <div class="task-item">
-                <div class="task-head">
-                    <p>Nome da Categoria</p>
-                    <span class="options">
-                        <span class="icon-option active" p-title="Opções da categoria">⋮</span>
-                        <div class="category-options">
-                            <div class="box-options">
-                                <p>Ordenar por</p>
-                                <ul>
-                                    <li><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span><span class="order my-order">A minha ordem</span></li>
-                                    <li><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span><span class="order data-order">data</span></li>
-                                </ul>
-                            </div>
-                            <hr>
+                <div id="task-back-head">
+                    <div class="task-head">
+                        <p>Nome da Categoria</p>
+                        <span class="options">
+                            <span class="icon-option " p-title="Opções da lista">⋮</span>
+                            <div class="category-options">
+                                <div class="box-options">
+                                    <p>Ordenar por</p>
+                                    <ul>
+                                        <li><span class="checkbox" tabindex="0" role="checkbox"
+                                                aria-checked="true"></span><span class="order my-order">A minha
+                                                ordem</span></li>
+                                        <li><span class="checkbox" tabindex="0" role="checkbox"
+                                                aria-checked="true"></span><span class="order data-order">data</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr>
 
-                            <div class="box-options">
-                                <span class="change-name">Mudar de nome</span>
-                                <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                <span class="delete-category">Eleminar a categoria</span>
+                                <div class="box-options">
+                                    <span class="change-name">Mudar de nome</span>
+                                    <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
+                                    <span class="delete-category">Eleminar a categoria</span>
+                                </div>
                             </div>
-                        </div>
-                    </span>
+                        </span>
+                    </div>
+                    <div class="add-task">
+                        <i class='bx bx-chevron-down-circle'></i><span>Adicionar uma tarefa</span>
+                    </div>
                 </div>
-                <div class="task-content">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias impedit, sapiente enim commodi dolore tempora facilis nisi iusto officiis error? Libero et facere laborum deleniti praesentium cupiditate assumenda debitis tenetur.</p>
+                <div class="task-content"></div>
+                <ul class="task-container first">
+                    <li class="checked"><span class="task-text">arrox</span>
+                        <div class="task-option">
+                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
+                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="task-dropdown">
+                    <div class="select">
+                        <div class="caret"></div>
+                        <span class="selected">Concluido(5)</span>
+                    </div>
+                    <ul class="task-container">
+                        <li class="checked"><span class="task-text">arrox</span>
+                            <div class="task-option"> 
+                                <button class="btn delete"><i class='bx bxs-trash'></i></button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="task-item">
-                <div class="task-head">
-                    <p>Nome da Categoria</p>
-                    <span class="options">
-                        <span class="icon-option active" p-title="Opções da categoria">⋮</span>
-                        <div class="category-options">
-                            <div class="box-options">
-                                <p>Ordenar por</p>
-                                <ul>
-                                    <li><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span><span class="order my-order">A minha ordem</span></li>
-                                    <li><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span><span class="order data-order">data</span></li>
-                                </ul>
-                            </div>
-                            <hr>
-
-                            <div class="box-options">
-                                <span class="change-name">Mudar de nome</span>
-                                <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                <span class="delete-category">Eleminar a categoria</span>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-            </div>
-            <div class="task-item">
-                <div class="task-head">
-                    <p>Nome da Categoria</p>
-                    <span class="options">
-                        <span class="icon-option active" p-title="Opções da categoria">⋮</span>
-                        <div class="category-options active">
-                            <div class="box-options">
-                                <p>Ordenar por</p>
-                                <ul>
-                                    <li><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span><span class="order my-order">A minha ordem</span></li>
-                                    <li><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span><span class="order data-order">data</span></li>
-                                </ul>
-                            </div>
-                            <hr>
-
-                            <div class="box-options">
-                                <span class="change-name">Mudar de nome</span>
-                                <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                <span class="delete-category">Eleminar a categoria</span>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-                <div class="task-content">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi explicabo sequi possimus numquam vitae amet. Pariatur non, in debitis fugiat at rerum commodi cum! Sed minus iusto laboriosam placeat.</p>
-                </div>
-            </div>
-            
         </div>
+
+    </div>
     </div>
 
     <script src="./assets/js/script.js"></script>
