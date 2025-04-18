@@ -1,40 +1,49 @@
-body {
-  margin: 0;
-  background: #87CEEB; /* céu azul */
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.ocean {
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background: #1E90FF; /* cor do mar */
-  overflow: hidden;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
 
-.wave {
-  background: rgba(255, 255, 255, 0.4);
-  position: absolute;
-  top: -50px;
-  width: 200%;
-  height: 100px;
-  border-radius: 100%;
-  animation: wave 4s linear infinite;
-}
+<body>
+  <div class="jogo fechar">
+     <button class="iniciar">Iniciar o Jogo</button>
+  </div>
+  <div class="cenario">
+    <div class="menu-solo active">
+      <div class="menu">
+        <div class="menu-head">
+          <p>Qual será o solo?</p>
+        </div>
+        <ul>
+          <li>Terra</li>
+          <li>Borracha</li>
+          <li>Mar</li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-bola">
+      <div class="menu">
+        <div class="menu-head">
+          <p>Qual será o tipo de bola?</p>
+        </div>
+        <ul>
+          <li>Borracha</li>
+          <li>Metal</li>
+          <li>vidro</li>
+        </ul>
+      </div>
+    </div>
+    <div class="type"></div>
 
-.wave2 {
-  animation: wave2 6s linear infinite;
-  opacity: 0.6;
-  top: -60px;
-}
+    <div class="solo"></div>
+  </div>
 
-@keyframes wave {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 
-@keyframes wave2 {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-25%); }
-}
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
