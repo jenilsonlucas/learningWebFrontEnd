@@ -21,9 +21,10 @@ const iconClose = document.querySelector('.icon-close');
 const formCreateCategory = document.querySelector('.form-create-category')
 const asideBtnCategory = document.querySelector('.aside-btn-category');
 const inputCategory = document.querySelector('.form-create-category input');
+const inputBoxCategory = document.querySelector('.form-create-category .input-box');    
 const btnCancelCategory = document.querySelector('.form-create-category .btn .cancel');
 const btnSubmitCategory = document.querySelector('.form-create-category .btn .submit');
-
+const messageCategory = document.querySelector('.message-category');
 //colocando a visibilidade do formulário de tarefas
 asideBtn.addEventListener('click', () => {
     formCreate.classList.add('active-form');
@@ -85,6 +86,27 @@ asideBtnCategory.addEventListener('click', () => {
 });
 
 btnCancelCategory.addEventListener('click', () => {
+    inputCategory.value = '';
+    messageCategory.classList.remove('active');
     formCreateCategory.classList.remove('active');
 });
 
+inputCategory.addEventListener('focus', () => {
+    inputBoxCategory.classList.add('active');
+});
+
+inputCategory.addEventListener('blur', () => {  
+    inputBoxCategory.classList.remove('active');
+});
+
+inputCategory.addEventListener('input', () => {
+
+
+    if(inputCategory.value.length > 0){
+        messageCategory.classList.remove('active');
+        btnSubmitCategory.classList.add('active');
+    }else {
+        messageCategory.classList.add('active');
+        btnSubmitCategory.classList.remove('active');      
+    }  
+});
