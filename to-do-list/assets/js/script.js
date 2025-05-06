@@ -17,7 +17,7 @@ const textAreaTask = document.querySelector('.form-create-task .textarea-box div
 const selectBox = document.querySelector('.form-create-task .select-box select')
 const iconClose = document.querySelector('.icon-close');
 
-//elementos do formulário de criação de tarefas
+//elementos do formulário de criação de cartegory
 const formCreateCategory = document.querySelector('.form-create-category')
 const asideBtnCategory = document.querySelector('.aside-btn-category');
 const inputCategory = document.querySelector('.form-create-category input');
@@ -31,6 +31,8 @@ asideBtn.addEventListener('click', () => {
 
 //tirando a visibidade do formulário de criação de tarefas
 iconClose.addEventListener('click', () => {
+    inputTask.value = '';
+    textAreaTask.value = '';
     formCreate.classList.remove('active-form');
 });
 
