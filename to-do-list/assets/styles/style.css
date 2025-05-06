@@ -1013,8 +1013,16 @@ hr {
     font-size: 0.9em;
     font-weight: 500;
     color: #40444A;
+    background: #282928;
+    cursor: default;
+    pointer-events: none;
+}
+
+.form-create-task .form-create .btn-task .btn.active{
+    color: #40444A;
     background: #9CB9E8;
     cursor: pointer;
+    pointer-events: all;
 }
 
 
@@ -1036,12 +1044,12 @@ hr {
 }
 
 .form-create-category .form-create{
-    width: 300px;
-    height: 200px;
+    width: 290px;
+    height: 190px;
     background: var(--primary-color);
     border-radius: 30px;
     box-shadow: 1px 1px 10px #131314;
-    padding: 20px;
+    padding: 20px 30px 30px 30px;
     position: relative;
 }
 
@@ -1057,7 +1065,13 @@ hr {
 .form-create-category .form-create .input-box{
     width: 100%;
     height: 35px;
-    margin-bottom: 40px;
+}
+
+.form-create-category .form-create .input-box.active{
+    border-bottom: 4px solid #9CB9E8;
+    border-end-end-radius: 5px;
+    border-bottom-left-radius: 5px;
+    caret-color: #9CB9E8;
 }
 
 .form-create-category .form-create .input-box input{
@@ -1076,7 +1090,28 @@ hr {
     color: #40444A;
 }
 
+.form-create-category .form-create .message-category{
+    display: none;
+    padding: 2px 0 0 10px;
+    width: 210px;
+}
+
+.form-create-category .form-create .message-category.active{
+    display: block;
+}
+
+.form-create-category .form-create .message-category .message-category-error{
+    display: inline-block;
+    font-size: .7em;
+    font-weight: 400;
+    color: red;
+    height: 15px;
+}
+
 .form-create-category .form-create .btn{
+    position: absolute;
+    bottom: 18px;
+    right: 19px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1125,11 +1160,11 @@ hr {
 }
 
 
-.form-create-category .form-create .btn.active button:hover{
+.form-create-category .form-create .btn .submit.active:hover{
     background: #9cb9e823;
 }
 
-.form-create-category .form-create .btn.active button{
+.form-create-category .form-create .btn .submit.active{
     pointer-events: all;
     cursor: pointer;
     color: #9CB9E8;
