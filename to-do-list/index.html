@@ -32,7 +32,9 @@
                 </form>
             </div>
             <div class="info-icons">
-                <a href="#"><i class='bx bxs-bell'></i></a>
+                <a href="#" class="notification"><i class='bx bxs-bell'></i>
+                <span class="notifcation-number">3</span>
+                </a>
                 <a href="#"><i class='bx bx-cog'></i></a>
             </div>
             <div class="profile">
@@ -44,9 +46,8 @@
         </div>
     </div>
     <aside>
-
         <nav class="navbar-side">
-            <button><i class='bx bx-plus'></i>Criar</button>
+            <button class="aside-btn-task"><i class='bx bx-plus'></i>Criar</button>
             <a href="#" class="thing-all"><i class='bx bx-chevron-down-circle'></i>Todas as tarefas</a>
             <div class="dropdown">
                 <div class="select">
@@ -54,17 +55,18 @@
                     <div class="caret"></div>
                 </div>
                 <ul class="menu">
-                    <li>
-                        <div><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span>Casa</div>
+                    <li class="check">
+                        <div><span class="checkbox"></span>
+                            <span class="menu-item-text">Casa</span></div>
                         <span class="count">1</span>
                     </li>
                     <li>
-                        <div><span class="checkbox" tabindex="0" role="checkbox" aria-checked="true"></span>Familia
+                        <div><span class="checkbox"></span><span class="menu-item-text">Familia</span>
                         </div><span class="count">4</span>
                     </li>
                 </ul>
             </div>
-            <span class="thing-all"><i class='bx bx-plus'></i>Criar nova lista</span>
+            <span class="thing-all aside-btn-category"><i class='bx bx-plus'></i>Criar nova lista</span>
             <a href="#" class="loggout"><i class='bx bxs-door-open'></i>Sair</a>
 
         </nav>
@@ -72,7 +74,7 @@
 
     <div class="content">
         <div class="tasks-list">
-            <div class="task-item">
+            <div class="task-item clicked">
                 <div id="task-back-head">
                     <div class="task-head">
                         <p>Nome da Categoria</p>
@@ -106,7 +108,11 @@
                 </div>
                 <div class="task-content"></div>
                 <ul class="task-container first">
-                    <li class="checked"><span class="task-text">arrox</span>
+                    <li>
+                        <div class="check">
+                            <span class="checkbox"></span>
+                            <span class="task-text">arrox</span>
+                        </div>
                         <div class="task-option">
                             <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
                             <button class="btn delete"><i class='bx bxs-trash'></i></button>
@@ -119,296 +125,69 @@
                         <span class="selected">Concluido(5)</span>
                     </div>
                     <ul class="task-container">
-                        <li class="checked"><span class="task-text">arrox</span>
-                            <div class="task-option"> 
+                        <li class="checked">
+                            <div class="check">
+                                <span class="checkbox"></span>
+                                <span class="task-text">arrox</span>
+                            </div>
+                            <div class="task-option">
                                 <button class="btn delete"><i class='bx bxs-trash'></i></button>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="task-item">
-                <div id="task-back-head">
-                    <div class="task-head">
-                        <p>Nome da Categoria</p>
-                        <span class="options">
-                            <span class="icon-option " p-title="Opções da lista">⋮</span>
-                            <div class="category-options">
-                                <div class="box-options">
-                                    <p>Ordenar por</p>
-                                    <ul>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order my-order">A minha
-                                                ordem</span></li>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order data-order">data</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr>
-
-                                <div class="box-options">
-                                    <span class="change-name">Mudar de nome</span>
-                                    <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                    <span class="delete-category">Eleminar a categoria</span>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="add-task">
-                        <i class='bx bx-chevron-down-circle'></i><span>Adicionar uma tarefa</span>
-                    </div>
-                </div>
-                <div class="task-content"></div>
-                <ul class="task-container first">
-                    <li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="task-dropdown">
-                    <div class="select">
-                        <div class="caret"></div>
-                        <span class="selected">Concluido(5)</span>
-                    </div>
-                    <ul class="task-container">
-                        <li class="checked"><span class="task-text">arrox</span>
-                            <div class="task-option"> 
-                                <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="task-item">
-                <div id="task-back-head">
-                    <div class="task-head">
-                        <p>Nome da Categoria</p>
-                        <span class="options">
-                            <span class="icon-option " p-title="Opções da lista">⋮</span>
-                            <div class="category-options">
-                                <div class="box-options">
-                                    <p>Ordenar por</p>
-                                    <ul>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order my-order">A minha
-                                                ordem</span></li>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order data-order">data</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr>
-
-                                <div class="box-options">
-                                    <span class="change-name">Mudar de nome</span>
-                                    <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                    <span class="delete-category">Eleminar a categoria</span>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="add-task">
-                        <i class='bx bx-chevron-down-circle'></i><span>Adicionar uma tarefa</span>
-                    </div>
-                </div>
-                <div class="task-content"></div>
-                <ul class="task-container first">
-                    <li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="task-dropdown">
-                    <div class="select">
-                        <div class="caret"></div>
-                        <span class="selected">Concluido(5)</span>
-                    </div>
-                    <ul class="task-container">
-                        <li class="checked"><span class="task-text">arrox</span>
-                            <div class="task-option"> 
-                                <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="task-item">
-                <div id="task-back-head">
-                    <div class="task-head">
-                        <p>Nome da Categoria</p>
-                        <span class="options">
-                            <span class="icon-option " p-title="Opções da lista">⋮</span>
-                            <div class="category-options">
-                                <div class="box-options">
-                                    <p>Ordenar por</p>
-                                    <ul>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order my-order">A minha
-                                                ordem</span></li>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order data-order">data</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr>
-
-                                <div class="box-options">
-                                    <span class="change-name">Mudar de nome</span>
-                                    <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                    <span class="delete-category">Eleminar a categoria</span>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="add-task">
-                        <i class='bx bx-chevron-down-circle'></i><span>Adicionar uma tarefa</span>
-                    </div>
-                </div>
-                <div class="task-content"></div>
-                <ul class="task-container first">
-                    <li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="task-dropdown">
-                    <div class="select">
-                        <div class="caret"></div>
-                        <span class="selected">Concluido(5)</span>
-                    </div>
-                    <ul class="task-container">
-                        <li class="checked"><span class="task-text">arrox</span>
-                            <div class="task-option"> 
-                                <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="task-item">
-                <div id="task-back-head">
-                    <div class="task-head">
-                        <p>Nome da Categoria</p>
-                        <span class="options">
-                            <span class="icon-option " p-title="Opções da lista">⋮</span>
-                            <div class="category-options">
-                                <div class="box-options">
-                                    <p>Ordenar por</p>
-                                    <ul>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order my-order">A minha
-                                                ordem</span></li>
-                                        <li><span class="checkbox" tabindex="0" role="checkbox"
-                                                aria-checked="true"></span><span class="order data-order">data</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr>
-
-                                <div class="box-options">
-                                    <span class="change-name">Mudar de nome</span>
-                                    <span class="delete-task-done">Eliminar todas as tarefas concluidas</span>
-                                    <span class="delete-category">Eleminar a categoria</span>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="add-task">
-                        <i class='bx bx-chevron-down-circle'></i><span>Adicionar uma tarefa</span>
-                    </div>
-                </div>
-                <div class="task-content"></div>
-                <ul class="task-container first">
-                    <li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li>
-                    <li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li><li class="checked"><span class="task-text">arrox</span>
-                        <div class="task-option">
-                            <button class="btn edit"><i class='bx bxs-edit-alt'></i></button>
-                            <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="task-dropdown">
-                    <div class="select">
-                        <div class="caret"></div>
-                        <span class="selected">Concluido(5)</span>
-                    </div>
-                    <ul class="task-container">
-                        <li class="checked"><span class="task-text">arrox</span>
-                            <div class="task-option"> 
-                                <button class="btn delete"><i class='bx bxs-trash'></i></button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
         </div>
 
     </div>
+    </div>
+
+    <div class="form-create-task">
+        <div class="form-create">
+            <div class="icon-close">
+                <span><i class='bx bx-x'></i></span>
+            </div>
+            <form action="">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" placeholder="Adicionar título">
+                </div>
+                <div class="textarea-box">
+                    <span class="icon"><i class='bx bx-menu-alt-left'></i></span>
+                    <div>
+                        <textarea name=""></textarea>
+                    </div>
+                </div>
+                <div class="select-box">
+                    <span class="icon"><i class='bx bx-calendar'></i></span>
+                    <select name="" id="">
+                        <option value="">As minha tarefas</option>
+                    </select>
+                </div>
+                <div class="btn-task">
+                    <button class="btn">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="form-create-category">
+        <div class="form-create">
+            <div class="category-title">
+                <h3>Criar nova lista</h3>
+            </div>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Introduzir nome">
+                </div>
+
+                <div class="btn">
+                    <span class="cancel">Cancelar</span>
+                    <button type="submit" class="submit">Concluido</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="./assets/js/script.js"></script>
