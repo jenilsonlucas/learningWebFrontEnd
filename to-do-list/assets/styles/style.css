@@ -522,7 +522,7 @@ aside.active-aside .navbar-side {
 }
 
 .task-head .options .icon-option {
-    position: sticky;
+    position: relative;
     font-size: 1em;
     font-weight: 700;
     color: #C4C7C5;
@@ -572,14 +572,16 @@ aside.active-aside .navbar-side {
 }
 
 .task-head .options .category-options {
-    display: none;
-    position: relative;
+    display: block;
+    position: absolute;
+    top: -50%;
     background: #282B2D;
     width: 300px;
-    height: 300px;
+    height: 250px;
     border-radius: 5px;
     box-shadow: 0px 5px 10px #131314;
     overflow: hidden;
+    z-index: 600;
 }
 
 .task-head .options .category-options .box-options {
